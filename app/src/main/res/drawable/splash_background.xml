@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item
+        android:drawable="@color/colorPrimary"/>
+
+    <item
+        android:top="180dp"
+        android:gravity="center|top"
+        android:height="100dp"
+        android:width="100dp">
+        <bitmap
+            android:src="@drawable/logo_in_app"/>
+    </item>
+
+    <item
+        android:bottom="100dp"
+        android:gravity="bottom|center_horizontal"
+        android:height="16dp"
+        android:width="50dp">
+        <bitmap
+            android:src="@drawable/text_escanrr"/>
+
+    </item>
+
+</layer-list>

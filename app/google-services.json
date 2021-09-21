@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "807886631450",
+    "firebase_url": "https://escanrr.firebaseio.com",
+    "project_id": "escanrr",
+    "storage_bucket": "escanrr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807886631450:android:4b6dc17bb2c0b0992617a3",
+        "android_client_info": {
+          "package_name": "com.example.escannrr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807886631450-uo9e9mn19dngievg8h8abihhkulgc8qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.escannrr",
+            "certificate_hash": "ddd88a6c56efb89350cfab84c94a466429527019"
+          }
+        },
+        {
+          "client_id": "807886631450-93eqr5l88esj1a8088ueupn6gb9qurvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPxLkbvOf3zNFJIef4bnu0FhA3S8h98ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807886631450-93eqr5l88esj1a8088ueupn6gb9qurvd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/search_topbar"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="Main Menu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_more_vert_24_white">
+
+        <menu>
+
+            <item android:id="@+id/import_fg_topbar"
+                android:icon="@drawable/ic_baseline_image_24"
+                android:title="Import from Gallery"
+                app:showAsAction="never"/>
+            <item android:id="@+id/import_pdf_topbar"
+                android:icon="@drawable/ic_baseline_picture_as_pdf_24"
+                android:title="Import PDF"
+                app:showAsAction="never"/>
+            <item android:id="@+id/select_topbar"
+                android:icon="@drawable/ic_baseline_check_box_24"
+                android:title="Select"
+                app:showAsAction="never"/>
+            <item android:id="@+id/premium_topbar"
+                android:icon="@drawable/ic_baseline_stars_24"
+                android:title="Premium"
+                app:showAsAction="never"/>
+
+        </menu>
+
+    </item>
+
+</menu>
