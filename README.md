@@ -18,6 +18,15 @@ Here are some Screen Shots to get a visual of the working of the application.
 
 Here are some of the coded functions and tools which are used in this application:
 
+- OpenCV camera preview of paper - [OpenCV](https://opencv.org/)
+- Image Processing with OpenCV for filters ( B/W, color, vintage, grayscale, document, etc)
+- Pdfium for creating and managing PDF documents and save all the images in the form of PDF maintaining aspect ratio - [Pdfium](https://github.com/barteksc/PdfiumAndroid)
+- Drag Select RectclerView like Google File Manager or any other file managers - [Drag RecyclerView](https://github.com/afollestad/drag-select-recyclerview)
+- [Picaso](https://square.github.io/picasso/) a powerful image downloading and caching library for Android (used this for all netwrok images)
+- Advance PhotoViewer Library - [BaseFlow-PhotoView](https://github.com/Baseflow/PhotoView)
+- A perfect [CircleImageView](https://github.com/hdodenhof/CircleImageView) library for round Profile Pictures
+- And all the basic functions of Application ( CRUD with documents )
+
 # Contributions
 
 Feel free to create issues and pull requests 😊 or [Contact Me](mailto:parneetraghuvanshi@gmail.com)
