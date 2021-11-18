@@ -126,24 +126,24 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             }
         });
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
-        databaseReference.keepSynced(true);
-        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User_md user_md = dataSnapshot.getValue(User_md.class);
-
-                username.setText(user_md.getName());
-
-                if (user_md.getImguri() != null){
-                    Picasso.get().load(user_md.getImguri()).into(userimg);
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
+//        databaseReference.keepSynced(true);
+//        databaseReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                User_md user_md = dataSnapshot.getValue(User_md.class);
+//
+//                username.setText(user_md.getName());
+//
+//                if (user_md.getImguri() != null){
+//                    Picasso.get().load(user_md.getImguri()).into(userimg);
+//                }
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,
                 R.string.navigation_drawer_open,R.string.navigation_drawer_close);

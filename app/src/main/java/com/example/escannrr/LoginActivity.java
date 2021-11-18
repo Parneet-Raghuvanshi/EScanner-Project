@@ -59,43 +59,46 @@ public class LoginActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean valid = validateUser();
-                login_btn.setVisibility(View.GONE);
-                login_pb.setVisibility(View.VISIBLE);
-                if (valid){
-                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
-                    databaseReference.keepSynced(true);
-                    databaseReference.orderByChild("number").equalTo(phone_id_txt.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if (dataSnapshot.getValue() == null){
-                                login_btn.setVisibility(View.VISIBLE);
-                                login_pb.setVisibility(View.GONE);
-                                Toast.makeText(LoginActivity.this, "You don't have Registered yet", Toast.LENGTH_SHORT).show();
-                            }
-                            else {
-                                phone_id_txt.setKeyListener(null);
-                                otp_txt.setVisibility(View.VISIBLE);
-                                login_pb.setVisibility(View.GONE);
-                                login_btn.setVisibility(View.GONE);
-                                finish_btn.setVisibility(View.VISIBLE);
-
-                                final String number=phone_id_txt.getText().toString().trim();
-                                final String mobile = "+"+code+number;
-                                sendVerificationCode(mobile);
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-                else {
-                    login_pb.setVisibility(View.GONE);
-                    login_btn.setVisibility(View.VISIBLE);
-                }
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+//                boolean valid = validateUser();
+//                login_btn.setVisibility(View.GONE);
+//                login_pb.setVisibility(View.VISIBLE);
+//                if (valid){
+//                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
+//                    databaseReference.keepSynced(true);
+//                    databaseReference.orderByChild("number").equalTo(phone_id_txt.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                            if (dataSnapshot.getValue() == null){
+//                                login_btn.setVisibility(View.VISIBLE);
+//                                login_pb.setVisibility(View.GONE);
+//                                Toast.makeText(LoginActivity.this, "You don't have Registered yet", Toast.LENGTH_SHORT).show();
+//                            }
+//                            else {
+//                                phone_id_txt.setKeyListener(null);
+//                                otp_txt.setVisibility(View.VISIBLE);
+//                                login_pb.setVisibility(View.GONE);
+//                                login_btn.setVisibility(View.GONE);
+//                                finish_btn.setVisibility(View.VISIBLE);
+//
+//                                final String number=phone_id_txt.getText().toString().trim();
+//                                final String mobile = "+"+code+number;
+//                                //sendVerificationCode(mobile);
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                        }
+//                    });
+//                }
+//                else {
+//                    login_pb.setVisibility(View.GONE);
+//                    login_btn.setVisibility(View.VISIBLE);
+//                }
             }
         });
 
@@ -127,14 +130,14 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void sendVerificationCode(String mobile) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                mobile,
-                120,
-                TimeUnit.SECONDS,
-                TaskExecutors.MAIN_THREAD,
-                mCallbacks);
-    }
+//    private void sendVerificationCode(String mobile) {
+//        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+//                mobile,
+//                120,
+//                TimeUnit.SECONDS,
+//                TaskExecutors.MAIN_THREAD,
+//                mCallbacks);
+//    }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override

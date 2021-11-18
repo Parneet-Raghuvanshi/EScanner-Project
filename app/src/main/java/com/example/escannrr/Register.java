@@ -77,50 +77,53 @@ public class Register extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                login_btn.setVisibility(View.GONE);
-                login_pb.setVisibility(View.VISIBLE);
-                boolean valid = validateUser();
-                if (valid){
-                    final String number=phone_id_text.getText().toString().trim();
-                    DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("Users");
-                    dbref.keepSynced(true);
-                    dbref.orderByChild("number").equalTo(number).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if (dataSnapshot.getValue() != null){
-                                login_pb.setVisibility(View.GONE);
-                                login_btn.setVisibility(View.VISIBLE);
-                                Toast.makeText(Register.this,"User on this phone Number Already Exists",Toast.LENGTH_SHORT).show();
-                            }
-                            else {
-                                otp_txt.setVisibility(View.VISIBLE);
-                                terms_checkbox.setKeyListener(null);
-                                email_id_txt.setKeyListener(null);
-                                name_id_txt.setKeyListener(null);
-                                phone_id_text.setKeyListener(null);
-                                login_pb.setVisibility(View.GONE);
-                                login_btn.setVisibility(View.GONE);
-                                finish_btn.setVisibility(View.VISIBLE);
-
-                                final String email = email_id_txt.getText().toString().trim();
-                                final String number = phone_id_text.getText().toString().trim();
-                                final String name = name_id_txt.getText().toString().trim();
-                                final String mobile = "+"+code+number;
-
-                                sendVerificationCode(mobile);
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-                else {
-                    login_pb.setVisibility(View.GONE);
-                    login_btn.setVisibility(View.VISIBLE);
-                }
+                Intent intent = new Intent(Register.this,DashBoard.class);
+                startActivity(intent);
+                finish();
+//                login_btn.setVisibility(View.GONE);
+//                login_pb.setVisibility(View.VISIBLE);
+//                boolean valid = validateUser();
+//                if (valid){
+//                    final String number=phone_id_text.getText().toString().trim();
+//                    DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("Users");
+//                    dbref.keepSynced(true);
+//                    dbref.orderByChild("number").equalTo(number).addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                            if (dataSnapshot.getValue() != null){
+//                                login_pb.setVisibility(View.GONE);
+//                                login_btn.setVisibility(View.VISIBLE);
+//                                Toast.makeText(Register.this,"User on this phone Number Already Exists",Toast.LENGTH_SHORT).show();
+//                            }
+//                            else {
+//                                otp_txt.setVisibility(View.VISIBLE);
+//                                terms_checkbox.setKeyListener(null);
+//                                email_id_txt.setKeyListener(null);
+//                                name_id_txt.setKeyListener(null);
+//                                phone_id_text.setKeyListener(null);
+//                                login_pb.setVisibility(View.GONE);
+//                                login_btn.setVisibility(View.GONE);
+//                                finish_btn.setVisibility(View.VISIBLE);
+//
+//                                final String email = email_id_txt.getText().toString().trim();
+//                                final String number = phone_id_text.getText().toString().trim();
+//                                final String name = name_id_txt.getText().toString().trim();
+//                                final String mobile = "+"+code+number;
+//
+//                                //sendVerificationCode(mobile);
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                        }
+//                    });
+//                }
+//                else {
+//                    login_pb.setVisibility(View.GONE);
+//                    login_btn.setVisibility(View.VISIBLE);
+//                }
             }
         });
 
@@ -151,14 +154,14 @@ public class Register extends AppCompatActivity {
         });
     }
 
-    private void sendVerificationCode(String mobile) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                mobile,
-                120,
-                TimeUnit.SECONDS,
-                TaskExecutors.MAIN_THREAD,
-                mCallbacks);
-    }
+//    private void sendVerificationCode(String mobile) {
+//        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+//                mobile,
+//                120,
+//                TimeUnit.SECONDS,
+//                TaskExecutors.MAIN_THREAD,
+//                mCallbacks);
+//    }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         @Override

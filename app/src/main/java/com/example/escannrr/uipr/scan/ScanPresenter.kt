@@ -133,23 +133,6 @@ class ScanPresenter constructor(private val context: Context, private val iView:
         mCamera?.setDisplayOrientation(90)
     }
 
-    override fun surfaceCreated(p0: SurfaceHolder?) {
-        initCamera()
-    }
-
-    override fun surfaceChanged(p0: SurfaceHolder?, p1: Int, p2: Int, p3: Int) {
-        updateCamera()
-    }
-
-    override fun surfaceDestroyed(p0: SurfaceHolder?) {
-        synchronized(this) {
-            mCamera?.stopPreview()
-            mCamera?.setPreviewCallback(null)
-            mCamera?.release()
-            mCamera = null
-        }
-    }
-
     override fun onPictureTaken(p0: ByteArray?, p1: Camera?) {
         Log.i(TAG, "on picture taken")
         Observable.just(p0)
@@ -221,5 +204,21 @@ class ScanPresenter constructor(private val context: Context, private val iView:
     }
 
     private fun getMaxResolution(): Camera.Size? = mCamera?.parameters?.supportedPreviewSizes?.maxBy { it.width }
+    override fun surfaceCreated(p0: SurfaceHolder) {
+        initCamera()
+    }
+
+    override fun surfaceChanged(p0: SurfaceHolder, p1: Int, p2: Int, p3: Int) {
+        updateCamera()
+    }
+
+    override fun surfaceDestroyed(p0: SurfaceHolder) {
+        synchronized(this) {
+            mCamera?.stopPreview()
+            mCamera?.setPreviewCallback(null)
+            mCamera?.release()
+            mCamera = null
+        }
+    }
 
 }
