@@ -1,6 +1,6 @@
 ![](https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/escanner-banner.jpg?raw=true "E-Scanner")
 
-# Short Summary
+## Short Summary
 
 When the Indian Government banned the Cam Scanner Application, I thought to make a clone of the cam scanner application and was curious about its working, by using a bunch of libraries and plugins I managed to create a proper working E-Scanner application.
 
@@ -14,7 +14,7 @@ Here are some Screen Shots to get a visual of the working of the application.
   <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/image_3.jpeg?raw=true" title="PDF View" width="32%">
 </p>
 
-# Functions/Tools Used
+## Functions/Tools Used
 
 Here are some of the coded functions and tools which are used in this application:
 
@@ -27,17 +27,15 @@ Here are some of the coded functions and tools which are used in this applicatio
 - A perfect [CircleImageView](https://github.com/hdodenhof/CircleImageView) library for round Profile Pictures
 - And all the basic functions of Application ( CRUD with documents )
 
-# Contributions
-
-Feel free to create issues and pull requests 😊 or [Contact Me](mailto:parneetraghuvanshi@gmail.com)
+Always open for Discussions : 😊 [Parneet Raghuvanshi](mailto:parneetraghuvanshi@gmail.com)
 
 ***
 
 <p align="center">
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/android-studio.png?raw=true" title="Android Studio" height="40"/>
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/Git-Icon.png?raw=true" title="Git" height="40"/>
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/java.png?raw=true" title="Java" height="40"/>
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/xml.png?raw=true" title="XML" height="40"/>
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/firebase.png?raw=true" title="Firebase" height="40"/>
-  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/opencv.png?raw=true" title="OpenCV" height="40"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/android-studio.png?raw=true" title="Android Studio" height="30"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/Git-Icon.png?raw=true" title="Git" height="30"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/java.png?raw=true" title="Java" height="30"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/xml.png?raw=true" title="XML" height="30"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/firebase.png?raw=true" title="Firebase" height="30"/>
+  <img src="https://github.com/Parneet-Raghuvanshi/EScanner-Project/blob/master/readmeresources/opencv.png?raw=true" title="OpenCV" height="30"/>
 </p>
